@@ -1034,15 +1034,15 @@ class Abovethefold_Optimization
         }
 
         $inlineJS .= 'Abtf.h(' . json_encode($jssettings) . ');';
-        print '<script rel="abtf">' . $inlineJS . '</script>';
+        print '<script>' . $inlineJS . '</script>';
 
-        print '<style type="text/css" rel="abtf" id="AbtfCSS">' . $inlineCSS . '</style>';
+        print '<style type="text/css" id="AbtfCSS">' . $inlineCSS . '</style>';
 
         /**
          * Start async loading of CSS
          */
         if ($this->optimize_css_delivery && $headCSS) {
-            print '<script rel="abtf">Abtf.css();</script>';
+            print '<script>Abtf.css();</script>';
         }
     }
 
@@ -1072,7 +1072,7 @@ class Abovethefold_Optimization
 
             // start loading CSS from footer position
             
-            print "<script rel=\"abtf\">Abtf.f(".json_encode($footCSS).");</script>";
+            print "<script>Abtf.f(".json_encode($footCSS).");</script>";
         }
     }
 }
