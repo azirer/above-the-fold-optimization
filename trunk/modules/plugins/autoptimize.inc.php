@@ -89,7 +89,7 @@ class Abovethefold_OPP_Autoptimize extends Abovethefold_OPP {
 	 * Skip CSS from Autoptimize minificaiton
 	 */
 	public function skip_css($excludeCSS) {
-		$excludeCSS .= ',rel="abtf"';
+		$excludeCSS .= ',data-rel="abtf"';
 		return $excludeCSS;
 	}
 
@@ -97,7 +97,7 @@ class Abovethefold_OPP_Autoptimize extends Abovethefold_OPP {
 	 * Skip Javascript from Autoptimize minificaiton
 	 */
 	public function skip_js($excludeJS) {
-		$excludeJS .= ',rel="abtf",' . $this->CTRL->optimization->criticalcss_replacement_string;
+		$excludeJS .= ',data-rel="abtf",' . $this->CTRL->optimization->criticalcss_replacement_string;
 		return $excludeJS;
 	}
 
